@@ -1,0 +1,3 @@
+,State County Code,Precinct Name,VUID (Voter ID),Last Name,First Name,Middle Name,Former Last Name,Suffix,Gender,Date of Birth,Perm House Number,Perm Designator,Perm Directional Prefix,Perm Street Name,Perm Street Type,Perm Directional Suffix,Perm Unit Number,Perm Unit Type,Perm City,Perm ZIP Code,Mailing Address 1,Mailing Address 2,Mailing City,Mailing State,Mailing ZIP Code,EDR,Status Code,Hispanic Surname Flag,Election Date,Election Type,Election Party,Election Voting Method
+start_index + 1,1,4,8,18,68,118,168,218,222,223,231,240,252,254,304,316,318,330,342,392,401,511,561,611,631,651,659,660,661,669,671,674
+field_length,3,4,10,50,50,50,50,4,1,8,9,12,2,50,12,2,12,12,50,9,110,50,50,20,20,8,1,1,8,2,3,6

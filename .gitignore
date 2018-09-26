@@ -1,0 +1,5 @@
+.ipynb_checkpoints/
+/Data
+!/VoterCounts
+!Missing_Values.csv
+!field_definitions.csv
