@@ -181,6 +181,7 @@ def import_voter_data(voter_file_directory, geo_crosswalk_file):
 	print(f"Number of unsuccessfully merged records = {unmerged_count}")
 	print(f"Percentage of all records successfully merged with geographic crosswalk data = {unmerged_count / len(output)*100}%")
 
+
 	return output
 
 
@@ -265,21 +266,42 @@ def counts_by_geography(df, folder = None):
 	return output_dict
 
 
-	def aggregate_data(df, agg_fields, output_file):
-		'''
-		Aggregates data on a specific field or list of fields such that it can then be shared publicly without concerns for privacy of the individual records.
+def aggregate_data(df, agg_fields, output_file):
+	'''
+	Aggregates data on a specific field or list of fields such that it can then be shared publicly without concerns for privacy of the individual records.
 
-		Parameters
-		----------
-		df: pandas DataFrame of the format produced by import_voter_data()
+	Parameters
+	----------
+	df: pandas DataFrame of the format produced by import_voter_data()
 
-		agg_fields: list of str. Field names that should be part of the groupby aggregation. Note that it is recommended that fields with the most unique values be listed first and those with the least be listed last.
+	agg_fields: list of str. Field names that should be part of the groupby aggregation. Note that it is recommended that fields with the most unique values be listed first and those with the least be listed last.
 
-		output_file: str. The filepath desired for outputting the results as a CSV
+	output_file: str. The filepath desired for outputting the results as a CSV
 
-		Returns
-		-------
-		Nothing, to avoid memory overflows. Use CSV file generated if needed.
-		'''
+	Returns
+	-------
+	Nothing, to avoid memory overflows. Use CSV file generated if needed.
+	'''
 
-		df.groupby(agg_fields).count().to_csv(filepath)
+	df.groupby(agg_fields).count().dropna(subset = '_merge').to_csv(filepath)
+
+############## MAIN CODE ##############
+
+field_types = {'Gender': 'category',
+               'Perm ZIP Code': 'category',
+               'Mailing ZIP Code': 'category',
+               'Status Code': 'category',
+               'Precinct ID': 'float32',
+               'US Congressional District': 'float32',
+               '_merge': 'category',
+               'Age': 'float64',
+               'Age at Registration': 'float64',
+               'Registration Year': 'float64'}
+
+voters = pd.read_csv('Data/Full_Voter_Data_with_Geography.csv', dtype = field_types, index_col = 0)
+
+#AGG STRATEGY: COUNT by Perm ZIP, age, USC District, gender, status code (decreasing number of levels per field)
+voters.groupby(['Perm ZIP Code', 'Age', 
+	'US Congressional District', 'Gender', 
+	'Status Code']).count().dropna(subset = ['_merge'], 
+	inplace = True).to_csv('Data/Aggregated_Data/Counts_by_ZIP_Perm.csv')

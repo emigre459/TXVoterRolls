@@ -9,21 +9,64 @@ The data shown here are drawn from records for all registered voters in the stat
 
 ### Pre-Feedback Design
 
-1. I wanted to give readers the most basic information possible about the dataset as a starting point, to give them a sense of context for the points being made later. I also wanted to point out how the voter count has changed over time relative to Texas' population to explain the nonlinear trend in registrations over time
-	* **Point for possible changes:** I may want to remove the population estimates plot - since it's roughly linear over time, it may create more confusion than be a help
-2. Here I wanted to look at voter demographic trends from a variety of angles, to see if there was any clear heterogeneity in who is registered to vote by age, gender, or registration status. I could have sliced this more than 3 ways, but I expect that the average reader can't really intuitively process more than three interacting variables, so it seemed safe to keep the story simpler. Also, since the age distribution was more complex than the other two, I gave it the wide spot on the screen to give readers the most space to explore the nuances of that data.
-3. For this story page, I wanted to show how voter registrations trended over time, clearly denote that spikes were due to Presidential election years, while also exposing the oddity in registration ages during Presidential election years in a fun yet intuitive manner, so animation and gratuitous labeling seemed like a good way to do that!
-	* That being said, I probably need to update the x-axis title at least, as this measure is somewhat complicated
-4. I wanted to show how ridiculously spread out TX voters are by showing their current mailing addresses. This is a proxy measure for the quantity of absentee ballots that can be expected, as well as an indication that many unregistered voters may be unavailable due to their current place of residence.
-5. I chose to color voter count maps based upon the fraction of expected voting population (552,805) vs. actual registered voter count for each US Congressional District. The idea here is that districts with a lower fraction of registered-to-potential voters would likely provide the most bang-for-your-buck in terms of registration drives and other efforts that require a dense population of relevant parties due to the local structure of such efforts.
-6. 
+This list is ordered according the final story points I have within my Tableau design, withthe caption text of each story point provided as the sub-section header, for reference.
+
+#### Providing Context
+
+I wanted to give readers the most basic information possible about the dataset as a starting point, to give them a sense of context for the points being made later. I also wanted to point out how the voter count has changed over time relative to Texas' population to highlight the nonlinear trend in registrations over time.
+
+
+#### A Profile of Texas Voters
+
+Here I wanted to look at voter demographic trends from a variety of angles, to see if there was any clear heterogeneity in who is registered to vote by age, gender, or registration status. I could have sliced this more than 3 ways, but I expect that the average reader can't really intuitively process more than three interacting variables, so it seemed safe to keep the story simpler. Also, since the age distribution was more complex than the other two, I gave it the wide spot on the screen to give readers the most space to explore the nuances of that data. Note that I limited the age range to be between 18 and 123, since you have to be at least 18 to register to vote and the oldest recorded human only lived to be a little shy of 123 years old.
+
+
+#### Voter Registration Over the Decades
+
+For this story page, I wanted to show how voter registrations trended over time, clearly denote that spikes were due to Presidential election years, while also exposing the oddity in registration ages during Presidential election years in a fun yet intuitive manner, so animation and gratuitous labeling seemed like a good way to do that!
+
+
+#### Find Them Where They Live
+
+I wanted to show how ridiculously spread out TX voters are by showing their current mailing addresses. This is a proxy measure for the quantity of absentee ballots that can be expected, as well as an indication that many unregistered voters may be unavailable due to their current place of residence.
+
+
+#### Bringing It All Together
+
+I chose to color voter count maps based upon the fraction of expected voting population (552,805) vs. actual registered voter count for each US Congressional District. The idea here is that districts with a lower fraction of registered-to-potential voters would likely provide the most bang-for-your-buck in terms of registration drives and other efforts that require a dense population of relevant parties due to the local structure of such efforts. 
  
 
 ### Post-Feedback Design
-1. 
+
+#### Providing Context
 
 
-## Feedback: include all feedback you received from others on your visualization from the first sketch to the final visualization
+
+#### A Profile of Texas Voters
+
+
+
+
+#### Voter Registration Over the Decades
+
+
+
+
+#### Find Them Where They Live
+
+
+
+
+#### Bringing It All Together
+
+
+
+
+## Feedback: 
+
+I collected feedback from two friends and my wife regarding my initial design and, as a group, they provided joint feedback on each story point within my Tableau story. Here are their comments, which reflect the design changes I outline in the preceding Post-Feedback Design section.
+
+
 
 
 
