@@ -4,7 +4,7 @@
 
 Data for all registered voters in Texas were requested and provided by the Texas Secretary of State's office in August 2018. This work imports the 15M+ records, cleans them up, merges them with geographic data related to voting precincts, districts, etc. and does some basic exploratory analysis. 
 
-Much of the more advanced visualization and exploration work can be found in [this public Tableau site.](TBD)
+Much of the more advanced visualization and exploration work can be found in [this public Tableau site.](https://public.tableau.com/profile/dave.rench.mccauley#!/vizhome/TX_Voter_Trends_Agg_v2/Story1?publish=yes)
 
 ## Acknowledgements
 
